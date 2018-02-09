@@ -1,0 +1,37 @@
+h1, .h1 {
+	margin: 0 0 1rem;
+	@include ff(48, 58, 300);
+	@include m($S) {
+		@include ff(68, 78, 300);
+		margin: 0 0 1.5rem;
+	}
+}
+h2, .h2 {
+	@include ff(30, 38, 300);
+	margin: 0 0 1rem;
+	@include m($S) {
+		@include ff(48, 58, 300);
+		margin: 0 0 1.5rem;
+	}
+}
+h3, .h3 {
+
+	@include ff(26, 34, 300);
+	margin: 0 0 1rem;
+	@include m($S) {
+		@include ff(36, 44, 300);
+		margin: 0 0 2rem;
+	}
+}
+h4, .h4 {
+	@include ff(22, 28, 400);
+	margin: 0 0 2rem;
+}
+h5, .h5 {
+	@include ff(20, 28, 300);
+	margin: 0 0 1.5rem;
+}
+h6, .h6 {
+	@include ff(26, 36, 300);
+	margin: 0 0 1rem;
+}

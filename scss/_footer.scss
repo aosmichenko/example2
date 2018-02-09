@@ -1,0 +1,18 @@
+footer#colophon {
+	background: $lgrey;
+	padding-top: 2.75rem;
+	padding-bottom: 1.75rem;
+	@include m($S) {
+		padding-top: 4.5rem;
+		padding-bottom:2.5rem;
+	}
+	.footer-block_title {
+		margin-bottom: 30px;
+		margin-top: 0;
+	}
+	p {
+		a {
+			color: $text;
+		}
+	}
+}

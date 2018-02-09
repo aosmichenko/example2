@@ -1,0 +1,196 @@
+#page-intro {
+	padding-top: 40%;
+	padding-bottom: 8%;
+	background-color: #666666;
+	background-size: cover;
+	background-position: center center;
+	color: $w;
+	h1 {
+		@include ff(38, 38, 300);
+		@include m($S) {
+			@include ff(68, 78, 300);
+			margin: 0 0 1.5rem;
+		}
+	}
+	@include m($S) {
+		padding-top: 30%;
+	}
+}
+.section {
+	padding: 40px 0 30px;
+	@include m($M) {
+		padding: 100px 0 80px;
+	}
+	&.no-bp {
+		padding-bottom: 0;
+	}
+}
+.two-column {
+}
+.responsive-map {
+	position: relative;
+	//padding-top: 70%;
+	height: 100%;
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+.map-and-content .row.no-gutter {
+	.content-column {
+		padding: 50px 25px;
+		@include m($S) {
+			padding: 100px 65px;
+		}
+		@include m($M) {
+			padding: 100px 65px;
+		}
+	}
+}
+.quick-facts {
+	background: $blue;
+	color: $w;
+	img {
+		width: 100%;
+	}
+}
+.community-boxes {
+	.community-section {
+		clear: both;
+	}
+	img {
+		display: block;
+	}
+	strong {
+		display: block;
+		margin-bottom: 0;
+	}
+	p {
+		margin-top: 0;
+	}
+}
+.testimonial-and-content {
+	.testimonial-half {
+		background: $primary;
+		color: $w;
+		@include ff(26, 34, 300);
+		@include m($S) {
+			@include ff(36, 44, 300);
+		}
+		.inner-padding {
+			padding: 40px 25px 20px;
+			@include m($S) {
+				padding: 80px 50px 40px;
+			}
+		}
+	}
+	.content-column {
+		.inner-padding {
+			padding: 40px 25px 20px;
+			@include m($S) {
+				padding: 80px 50px 40px;
+			}
+		}
+	}
+}
+.mailchimp {
+	h2 {
+		color: $blue;
+	}
+}
+.testimonial {
+	color: $w;
+	background: $primary;
+	@include m($M) {
+		background:$primary url(../img/testimonial.png) no-repeat 90% center;
+		background-size: auto 85%;
+	}
+
+	@include ff(26, 34, 300);
+	@include m($S) {
+		@include ff(36, 44, 300);
+	}
+	.row {
+	}
+}
+.fullwidth-form {
+	background: $blue;
+	color: $w;
+}
+.menu-and-content {
+	#project-menu {
+		border-top: solid 2px $lgrey;
+		margin: 0;
+		padding: 0;
+		margin-top: 15px;
+		list-style: none;
+		li {
+			border-bottom: solid 2px $lgrey;
+			padding: 15px 0;
+			a {
+				@extend .h3;
+			}
+		}
+	}
+}
+.accordion-and-content {
+	.acc-container {
+		border-top: solid 2px $lgrey;
+		margin-bottom: 25px;
+	}
+	.acc {
+		border-bottom: solid 2px $lgrey;
+		padding: 15px 0;
+		.acc-title {
+			position: relative;
+			cursor: pointer;
+			margin-bottom: 0;
+		}
+		.acc-content {
+			max-height: 0;
+			overflow: hidden;
+			color: #797979;
+			padding-right: 10px;
+			padding-top: 0px;
+			@include tr(all 0.5s ease-out);
+			p:last-child {
+				margin-bottom: 0;
+			}
+			&.show {
+				padding-top: 15px;
+				@include tr(all 0.5s ease-in);
+				max-height: 1300px;
+			}
+		}
+	}
+}
+
+.menu-word {
+	display: none;
+	color: #fff;
+	font-size: 24px;
+	float: right;
+}
+@media only screen and (min-width: 768px) {
+	.menu-word {
+		display: inline;
+		margin-top: 50px;
+		margin-right: 10px;
+	}
+}
+.image-and-text {
+	.inner-padding {
+		padding: 2rem;
+	}
+}
+
+.lightbox {
+	width: 100%;
+	padding-top: 60%;
+	display: block;
+	margin-bottom: 30px;
+	background-size: cover;
+}

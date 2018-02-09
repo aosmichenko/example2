@@ -1,0 +1,63 @@
+.archive-container {
+	.row {
+		.col-md-4 {
+			@include r(979) {
+				&:nth-child(2n+1) {
+					clear: both;
+				}
+			}
+			@include m($M) {
+				&:nth-child(3n+1) {
+					clear: both;
+				}
+			}
+		}
+	}
+	article.post {
+		.post-thumb-container {
+			display: block;
+			max-width:500px;
+			overflow: hidden;
+			margin-bottom: 50px;
+			img {
+				width: 100%;
+				max-width:500px;
+				display: block;
+				object-fit: cover;
+			}
+		}
+		h3 {
+			margin-bottom: 0;
+			a {
+				color: $blue;
+			}
+		}
+		time {
+			display: block;
+
+		}
+	}
+}
+
+.posts-pagination {
+	clear: both;
+	ul {
+		margin: 0;
+		padding: 2rem 0;
+		border-top: 2px solid $text;
+		list-style: none;
+		li {
+			display: inline-block;
+			margin: 0 5px 0 0;
+			a {
+				color: $text;
+				&:hover {
+					color: $primary;
+				}
+			}
+			.current {
+				color: $primary;
+			}
+		}
+	}
+}

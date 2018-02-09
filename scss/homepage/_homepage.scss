@@ -1,0 +1,237 @@
+#hp-slider-wrap {
+	width: 100%;
+	height: 100%;
+	height: 89vh;
+	position: relative;
+	@include m($S) {
+		height: 100%;
+		height: 100vh;
+	}
+	.hp-slide,
+	.slide-media,
+	#hp-slider {
+		height: 100%;
+		height: 89vh;
+		@include m($S) {
+			height: 100%;
+			height: 100vh;
+		}
+	}
+	.hp-slide {
+		position: relative;
+	}
+	.slide-media {
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	.slide-blurb {
+		position: absolute;
+		width: 100%;
+		left: 0;
+		z-index: 9;
+		color: $w;
+		bottom: 15%;
+		@include m($S){
+			bottom: 30%;
+		}
+		.slide-title {
+			@include ff(34, 34, 300);
+			margin: 0 0 15px 0;
+			@include m($S) {
+			margin: 0 0 30px 0;
+			}
+			@include m($M) {
+				@include ff(60, 70, 300);
+			}
+			@include m($XL) {
+				@include ff(100, 110, 300);
+			}
+		}
+		.slide-subtitle {
+
+			@include ff(16, 24s, 300);
+			@include m($S) {
+				@include ff(32, 42, 300);
+			}
+			@include m($XL) {
+				@include ff(48, 58, 300);
+			}
+			margin: 0 0 30px 0;
+		}
+	}
+	.slide-button {
+		position: absolute;
+		width: 100%;
+		left: 0;
+		bottom: 10%;
+		z-index: 9;
+		color: $w;
+		a {
+			margin-bottom: 0;
+			display: block;
+			float: left;
+		}
+	}
+	.slider-nav {
+		position: absolute;
+		right: 50px;
+		bottom: 10%;
+		z-index: 90;
+		color: $w;
+		.slider-btn {
+			display: block;
+			float: left;
+			border: 2px solid $w;
+			background: url(../img/arrow.png) no-repeat;
+			cursor: pointer;
+			background-position-y: center;
+			height: 38px;
+			width: 38px;
+			-webkit-background-size: auto 24px;
+			background-size:  auto 24px;
+			@include m($M) {
+				height: 50px;
+				width: 50px;
+			}
+			@include tr;
+			&.slider-next {
+				-webkit-transform: rotate(180deg);
+				-moz-transform: rotate(180deg);
+				-ms-transform: rotate(180deg);
+				-o-transform: rotate(180deg);
+				transform: rotate(180deg);
+				border-right: 1px solid $w;
+				-ms-background-position-x: 10px;
+				background-position-x: 10px;
+				@include m($M) {
+					-ms-background-position-x: 15px;
+					background-position-x: 15px;
+				}
+				&:hover {
+					@include m($M) {
+						-ms-background-position-x: 5px;
+						background-position-x: 5px;
+					}
+				}
+			}
+			&.slider-prev {
+				-ms-background-position-x: 10px;
+				background-position-x: 10px;
+				border-right: 1px solid $w;
+				@include m($M) {
+					-ms-background-position-x: 15px;
+					background-position-x: 15px;
+				}
+				&:hover {
+					@include m($M) {
+						-ms-background-position-x: 5px;
+						background-position-x: 5px;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Video background */
+
+.videobg {
+	position: relative;
+	width: 100%; /* Set video container element width here */
+	height: 100%; /* Set video container element height here */
+	overflow: hidden;
+	background: #111; /* bg color, if video is not high enough */
+	iframe {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		border: 0 none;
+	}
+}
+
+/* horizontally center the video */
+.videobg-width {
+	position: absolute;
+	width: 100%; /* Change width value to cover more area*/
+	height: 100%;
+	left: -9999px;
+	right: -9999px;
+	margin: auto;
+}
+
+/* set video aspect ratio and vertically center */
+.videobg-aspect {
+	position: absolute;
+	width: 100%;
+	height: 0;
+	top: -9999px;
+	bottom: -9999px;
+	margin: auto;
+	padding-bottom: 56.25%; /* 16:9 ratio */
+	overflow: hidden;
+
+}
+
+.videobg-make-height {
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+}
+
+.scroll-downs {
+	position: absolute;
+	bottom: 10%;
+	left: 50%;
+	//width: 36px;
+	//height: 55px;
+	cursor: pointer;
+	-moz-animation: bounce 2s infinite;
+	-webkit-animation: bounce 2s infinite;
+	animation: bounce 2s infinite;
+	display: inline-block;
+	width: 22px;
+	height: 24px;
+	background: url(../img/down.png) no-repeat 50% 50%;
+	@include r(767) {
+		display: none;
+	}
+}
+//.mousey {
+//	width: 36px;
+//	padding: 10px 15px;
+//	height: 55px;
+//	border: 2px solid #fff;
+//	border-radius: 25px;
+//	opacity: 0.75;
+//}
+//.scroller {
+//	width: 3px;
+//	height: 10px;
+//	border-radius: 25%;
+//	background-color: #fff;
+//	animation-name: scroll;
+//	animation-duration: 2.2s;
+//	animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+//	animation-iteration-count: infinite;
+//}
+@keyframes scroll {
+	0% { opacity: 0; }
+	10% { transform: translateY(0); opacity: 1; }
+	100% { transform: translateY(15px); opacity: 0;}
+}
+
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+		transform: translateY(0);
+	}
+	40% {
+		transform: translateY(-22px);
+	}
+	60% {
+		transform: translateY(-15px);
+	}
+}

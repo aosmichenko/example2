@@ -1,0 +1,39 @@
+.sharing-panel {
+	padding-bottom: 2rem;
+	border-bottom: 2px solid $text;
+	& > span {
+		display: block;
+		float: left;
+		margin-right: 20px;
+	}
+	&:after {
+		display: table;
+		content: "";
+		clear: both;
+	}
+	div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
+		clear: none !important;
+	}
+	.sd-social-icon .sd-content ul li[class*='share-'].share-facebook a.sd-button,
+	.sd-social-icon .sd-content ul li[class*='share-'].share-twitter a.sd-button,
+	.sd-social-icon .sd-content ul li[class*='share-'].share-email a.sd-button,
+	.sd-social-icon .sd-content ul li[class*='share-'].share-tumblr a.sd-button,
+	.sd-social-icon .sd-content ul li[class*='share-'].share-pinterest a.sd-button,
+	.sd-social-icon .sd-content ul li[class*='share-'] a.sd-button {
+		background: transparent !important;
+		color: $text !important;
+	}
+	.sd-content ul li a.sd-button:before {
+		font-size: 20px;
+	}
+}
+.content-area h1 {
+	color: $blue;
+}
+.post-entry {
+	padding-top: 2rem;
+	overflow: hidden;
+	border-bottom: 2px solid $text;
+	padding-bottom: 2rem;
+	margin-bottom: 2rem;
+}

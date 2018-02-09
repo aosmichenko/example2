@@ -1,0 +1,206 @@
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+button:not(.mfp-arrow, .mfp-close, .overlay-close),
+//button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	display: inline-block;
+	background: transparent;
+	color: $primary;
+	border: solid 2px $primary;
+	padding: 5px 20px;
+	margin-bottom: 10px;
+	@include m($S) {
+		padding: 5px 20px;
+	}
+	text-decoration: none;
+	font-weight: 400;
+	@include tr;
+	position: relative;
+	overflow: hidden;
+	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	span {
+		position: relative;
+		z-index: 2;
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 150%;
+		height: 100%;
+		background-color: $primary;
+		z-index: 1;
+		-webkit-transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+		transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+		-webkit-transform-origin: 0% 100%;
+		transform-origin: 0% 100%;
+		-webkit-transition: -webkit-transform 0.3s, opacity 0.3s, background-color 0.3s;
+		transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+	}
+	&:hover {
+		text-decoration: none;
+		color: $w;
+		&:before {
+			opacity: 1;
+			background-color: $primary;
+			-webkit-transform: rotate3d(0, 0, 1, 0deg);
+			transform: rotate3d(0, 0, 1, 0deg);
+			-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+			transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+		}
+	}
+	&.btn-white {
+		border: solid 2px $w;
+		color: $w;
+		background: transparent;
+		&:before {
+			background-color: $w;
+		}
+		&:hover {
+			text-decoration: none;
+			color: $primary;
+			&:before {
+				opacity: 1;
+				background-color: $w;
+				-webkit-transform: rotate3d(0, 0, 1, 0deg);
+				transform: rotate3d(0, 0, 1, 0deg);
+				-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+				transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+			}
+		}
+	}
+}
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+	color: $text;
+	background-color: $w;
+	border: none;
+	border-bottom: $blue 2px solid;
+	border-radius: 0px;
+	width: 100%;
+	padding: 1rem 0;
+	margin-top: 10px;
+	@include placeholder {
+		opacity: 1;
+		color: $text;
+	}
+}
+.fullwidth-form {
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="password"],
+	input[type="search"],
+	textarea {
+		padding: 20px 35px;
+
+	}
+}
+textarea {
+	width: 100%;
+	max-width: 100%;
+	min-width: 100%;
+	height: 150px;
+}
+.btn {
+	display: inline-block;
+	background: transparent;
+	color: $primary;
+	border: solid 2px $primary;
+	padding: 5px 20px;
+	@include m($S) {
+		padding: 5px 20px;
+	}
+	text-decoration: none;
+	font-weight: 400;
+	@include tr;
+	position: relative;
+	overflow: hidden;
+	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 150%;
+		height: 100%;
+		background-color: $primary;
+		z-index: -1;
+		-webkit-transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+		transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+		-webkit-transform-origin: 0% 100%;
+		transform-origin: 0% 100%;
+		-webkit-transition: -webkit-transform 0.3s, opacity 0.3s, background-color 0.3s;
+		transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+	}
+	&:hover {
+		text-decoration: none;
+		color: $w;
+		&:before {
+			opacity: 1;
+			background-color: $primary;
+			-webkit-transform: rotate3d(0, 0, 1, 0deg);
+			transform: rotate3d(0, 0, 1, 0deg);
+			-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+			transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+		}
+	}
+	&.btn-white {
+		border: solid 2px $w;
+		color: $w;
+		background: transparent;
+		&:before {
+			background-color: $w;
+		}
+		&:hover {
+			text-decoration: none;
+			color: $primary;
+			&:before {
+				opacity: 1;
+				background-color: $w;
+				-webkit-transform: rotate3d(0, 0, 1, 0deg);
+				transform: rotate3d(0, 0, 1, 0deg);
+				-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+				transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+			}
+		}
+	}
+}
+#mc_embed_signup {
+
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="password"],
+	input[type="search"],
+	textarea {
+		background-color: $w;
+		border: none;
+		border-bottom: $blue 2px solid;
+		color: $blue;
+		border-radius: 0px;
+		width: 100%;
+		padding: 1rem 0;
+		margin-bottom: 20px;
+		@include placeholder {
+			opacity: 1;
+			color: $blue;
+		}
+	}
+	button {
+		margin-top: 40px;
+	}
+}
+.wpcf7-response-output {
+	clear: both;
+}
